@@ -6,7 +6,7 @@
     <title>Daftar Publikasi BPS Provinsi Jawa Tengah</title>
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
 
 <nav class="navbar navbar-expand-lg bg-primary navbar-dark shadow-sm sticky-top">
     <div class="container">
@@ -36,6 +36,7 @@
     </div>
 </nav>
 
+<main class="flex-grow-1">
 <div class="container py-5">
 
     @if(session('success'))
@@ -73,14 +74,16 @@
                         @foreach ($publikasi as $index => $item)
                             <tr>
                                 <td class="px-4">{{ $index + 1 }}</td>
-                                <td class="fw-semibold">{{ $item->judul }}</td>
+                                <td class="fw-semibold text-center">{{ $item->judul }}</td>
                                 <td class="text-center">{{ $item->tanggal_rilis }}</td>
-                                <td>
+                                <td class="text-center">
                                     @if($item->sampul)
-                                        <img src="{{ asset('images/'.$item->sampul) }}"
-                                            alt="{{ $item->judul }}"
-                                            width="70"
-                                            class="img-thumbnail">
+                                        <div class="d-flex justify-content-center">
+                                            <img src="{{ asset('images/'.$item->sampul) }}"
+                                                alt="{{ $item->judul }}"
+                                                width="70"
+                                                class="img-thumbnail">
+                                        </div>
                                     @endif
                                 </td>
                                 <td class="text-center">
@@ -109,17 +112,18 @@
     </div>
 
 </div>
+</main>
 
-<footer class="border-top py-4 mt-5 mt-auto" >
-    <div class="container text-center text-muted">
-        <small>BPS Provinsi Jawa Tengah <br>
-            Created by Nabila Novita Rahma (222413701)
-"Politeknik Statistika STIS"
-"Program Studi DIV Komputasi Statistik"
-"Jakarta, Indonesia"</small>
+<footer class="mt-auto border-top bg-light py-4 shadow-sm">
+    <div class="container text-center text-muted small">
+        <div class="fw-semibold text-dark">BPS PROVINSI JAWA TENGAH
+        </div>
+        <div>Created by Nabila Novita Rahma (222413701)</div>
+        <div>Politeknik Statistika STIS</div>
+        <div>Program Studi DIV Komputasi Statistik</div>
+        <div>Jakarta, Indonesia</div>
     </div>
 </footer>
 </body>
 
 </html>
-{}
