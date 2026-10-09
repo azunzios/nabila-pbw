@@ -35,6 +35,7 @@
                             Sampul sekarang:
                             <code>{{ $publikasi->sampul ?? 'belum ada' }}</code>
                         </small>
+                        <small class="text-muted d-block">Format: jpg, jpeg, png. Maks 5MB.</small>
                     </div>
 
                     <!-- Preview gambar lama -->

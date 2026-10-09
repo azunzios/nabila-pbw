@@ -26,7 +26,7 @@ class PublikasiController extends Controller
         $request->validate([
             'judul' => 'required',
             'tanggal_rilis' => 'required|date',
-            'sampul' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
+            'sampul' => 'nullable|image|mimes:jpg,jpeg,png|max:5120',
         ]);
 
         $namaSampul = null;
@@ -60,7 +60,7 @@ class PublikasiController extends Controller
         $request->validate([
             'judul' => 'required',
             'tanggal_rilis' => 'required|date',
-            'sampul' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
+            'sampul' => 'nullable|image|mimes:jpg,jpeg,png|max:5120',
         ]);
 
         $namaSampul = $publikasi->sampul; // pakai yang lama dulu

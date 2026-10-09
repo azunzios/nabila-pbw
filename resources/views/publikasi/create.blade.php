@@ -30,7 +30,7 @@
                     <div class="mb-3">
                         <label for="sampul" class="form-label">Upload Sampul</label>
                         <input type="file" name="sampul" id="sampul" class="form-control" accept="image/*">
-                        <small class="text-muted">Format: jpg, jpeg, png. Maks 2MB.</small>
+                        <small class="text-muted">Format: jpg, jpeg, png. Maks 5MB.</small>
                     </div>
 
                     <div class="d-flex justify-content-between">
